@@ -111,7 +111,52 @@
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Income:"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:padding="10dp"
+                    />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:id="@+id/recycler_income"
+                    android:layout_height="200dp">
+
+
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Expense:"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:padding="10dp"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:id="@+id/recycler_expense"
+                    android:layout_height="200dp">
+
+
+
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </LinearLayout>
+
+        </ScrollView>
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -120,28 +165,28 @@
             android:layout_marginBottom="160dp">
 
             <TextView
+                android:id="@+id/expense_ft_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Expense"
-                android:id="@+id/expense_ft_text"
-                android:textColor="@android:color/white"
-                android:background="@android:color/darker_gray"
                 android:layout_gravity="center"
                 android:layout_marginRight="5dp"
-                android:visibility="invisible"
-                android:textAppearance="?android:textAppearanceSmall"/>
+                android:background="@android:color/darker_gray"
+                android:text="Expense"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="@android:color/white"
+                android:visibility="invisible" />
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/expense_ft_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/expense_ft_button"
                 android:layout_gravity="bottom|end"
                 android:backgroundTint="#07bca4"
                 android:elevation="6dp"
-                app:fabSize="mini"
+                android:src="@drawable/expense"
                 android:visibility="invisible"
-                app:pressedTranslationZ="12dp"
-                android:src="@drawable/expense"/>
+                app:fabSize="mini"
+                app:pressedTranslationZ="12dp" />
 
 
         </LinearLayout>
@@ -154,55 +199,49 @@
             android:layout_marginBottom="90dp">
 
             <TextView
+                android:id="@+id/income_ft_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Income"
-                android:id="@+id/income_ft_text"
-                android:textColor="@android:color/white"
-                android:padding="5dp"
-                android:background="@android:color/darker_gray"
-                android:layout_marginRight="5dp"
                 android:layout_gravity="center"
-                android:visibility="invisible"
-                android:textAppearance="?android:textAppearanceSmall"/>
+                android:layout_marginRight="5dp"
+                android:background="@android:color/darker_gray"
+                android:padding="0dp"
+                android:text="Income"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="@android:color/white"
+                android:visibility="invisible" />
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/income_ft_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/income_ft_button"
                 android:layout_gravity="bottom|end"
                 android:backgroundTint="#1ce10a"
                 android:elevation="6dp"
-                app:fabSize="mini"
+                android:src="@drawable/income"
                 android:visibility="invisible"
-                app:pressedTranslationZ="12dp"
-                android:src="@drawable/income"/>
+                app:fabSize="mini"
+                app:pressedTranslationZ="12dp" />
 
 
         </LinearLayout>
 
 
-
-
         <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fb_main_plus_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/fb_main_plus_button"
             android:layout_gravity="bottom|end"
-            android:layout_marginBottom="16dp"
             android:layout_marginRight="20dp"
+            android:layout_marginBottom="16dp"
             android:backgroundTint="#124A51"
             android:elevation="6dp"
-            app:fabSize="normal"
+            android:src="@drawable/income"
             android:visibility="visible"
-            android:src="@drawable/income"/>
-
-
+            app:fabSize="normal" />
 
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
-
-
 
 
 </LinearLayout>

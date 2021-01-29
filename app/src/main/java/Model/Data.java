@@ -7,12 +7,12 @@ public class Data {
     private String node;
     private String id;
 
-    public Data(int amount, String type, String node, String id, String data) {
+    public Data(int amount, String type, String node, String id, String date) {
         this.amount = amount;
         this.type = type;
         this.node = node;
         this.id = id;
-        this.data = data;
+        this.data = date;
     }
 
     public int getAmount() {
